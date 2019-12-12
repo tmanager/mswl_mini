@@ -1,0 +1,56 @@
+/* pages/used/used.wxss */
+.container .search{
+  height: 65rpx;
+  padding: 12.5rpx 20rpx 15rpx 20rpx;
+  background: #F24F50;
+}
+.container .search-left{
+  flex: 8;
+  background: #F89696;
+  text-align: left;
+  border-radius: 5rpx;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #FCD6D6;
+  line-height: 20rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.scroll-view_H{
+    white-space:nowrap;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0 10rpx;
+}
+
+.nav-name{
+    display:inline-block;
+    margin:0 5px;
+    font-size:16px;
+    color: #2b2e33;
+    border-bottom: 2px solid transparent;
+    padding:10px;
+}
+
+.nav-hover{
+    color: #F24F50;
+    border-bottom: 2px solid #F24F50;
+}

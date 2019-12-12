@@ -1,0 +1,146 @@
+<!--pages/rentsend/rentsend.wxml-->
+<view class="container">
+  <view bindtap='imageUpload'>
+    <image src="{{coverimg}}" style='width:100%' mode="aspectFill"></image>
+  </view>
+  <view class="container-gray group">
+		<view class="group-header">基本信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label" space="emsp">小区名称</text>
+					<view class="input-item-content">
+						<input type="text" placeholder=""></input>
+					</view>
+				</view>
+        <view wx:if="{{brand == 1001}}">
+          <view class="input-item">
+            <text class="input-item-label" space="emsp">建筑面积</text>
+            <view class="input-item-content">
+              <input type="text"></input>
+            </view>
+            <view style='color:#666'>m<text class='sup'>2</text></view>
+          </view>
+          <view class="input-item">
+            <text class="input-item-label">房屋户型</text>
+            <picker class="input-item-content" bindchange="bindHousePickerChange" value="{{houseIndex}}" range="{{houseArr}}" mode="multiSelector">
+            {{houseArr[0][houseIndex[0]]}}{{houseArr[1][houseIndex[1]]}}{{houseArr[2][houseIndex[2]]}}
+            </picker>
+          </view>
+        </view>
+        <view wx:if="{{brand == 1002}}">
+          <view class="input-item">
+            <text class="input-item-label" space="emsp">卧室面积</text>
+            <view class="input-item-content">
+              <input type="text"></input>
+            </view>
+            <view style='color:#666'>m<text class='sup'>2</text></view>
+          </view>
+          <view class="input-item">
+            <text class="input-item-label">房屋户型</text>
+            <picker class="input-item-content" bindchange="bindHousePickerChange" value="{{houseIndex}}" range="{{houseArr}}" mode="multiSelector">
+            {{houseArr[0][houseIndex[0]]}}{{houseArr[1][houseIndex[1]]}}{{houseArr[2][houseIndex[2]]}}
+            </picker>
+          </view>
+          <view class="input-item">
+            <text class="input-item-label">卧室类型</text>
+            <picker class="input-item-content" bindchange="bindPickerChange" data-pickername="bedroom" value="{{bedroomIndex}}" range="{{bedroomArr}}" mode="selector">
+            {{bedroomArr[bedroomIndex]}}
+            </picker>
+          </view>
+        </view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">朝  向</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="orientation" value="{{orientationIndex}}" range="{{orientationArr}}" mode="selector">{{orientationArr[orientationIndex]}}
+					</picker>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">楼  层</text>
+					<view class="input-item-content">
+						<input type="text"></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">车  位</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="park" value="{{parkIndex}}" range="{{parkArr}}" mode="selector">{{parkArr[parkIndex]}}
+					</picker>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">电  梯</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="elevator" value="{{elevatorIndex}}" range="{{elevatorArr}}" mode="selector">{{elevatorArr[elevatorIndex]}}
+					</picker>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label" space="nbsp">月 租 金</text>
+					<view class="input-item-content">
+						<input type="text" placeholder=""></input>
+					</view>
+          <view style='color:#666'>元/月</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="nbsp">联 系 人</text>
+					<view class="input-item-content">
+						<input type="text" placeholder=""></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="nbsp">联系电话</text>
+					<view class="input-item-content">
+						<input type="text" placeholder=""></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">身  份</text>
+					<view class="input-item-content">
+						<radio-group class="radio-group" bindchange="radioChange">
+              <label class="radio" wx:for="{{identity}}">
+                <view class="tui-menu-list"><radio color="#F24F50" value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}</view>
+              </label>
+            </radio-group>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">入住时间</text>
+					<view class="input-item-content">
+            <picker mode="multiSelector" value="{{date}}" bindchange="changeDate" range="{{dateArray}}">
+              <view class="tui-picker-detail">
+                 {{dateArray[0][date[0]]}}-{{dateArray[1][date[1]]}}-{{dateArray[2][date[2]]}}
+              </view>
+            </picker>
+					</view>
+				</view>
+        <view class="input-item">
+          <view class="input-item-label" style='width:10em'>装修情况</view>
+        </view>
+        <view class="multiple-select" style='padding-top:0'>
+          <view wx:for="{{decorations}}" wx:key="{{item.id}}">
+            <text data-id="{{item.id}}" bindtap="onDecorationSelectTag" class="{{item.select?'active':''}}">{{item.text}}</text>
+          </view>
+			  </view>
+        <view class="input-item">
+          <view class="input-item-label" style='width:10em'>房屋配置</view>
+        </view>
+        <view class="multiple-select" style='padding-top:0'>
+          <view wx:for="{{equipments}}" wx:key="{{item.id}}">
+            <text data-id="{{item.id}}" bindtap="onEquipmentSelectTag" class="{{item.select?'active':''}}">{{item.text}}</text>
+          </view>
+			  </view>
+        <view class="input-item">
+          <view class="input-item-label" style='width:10em'>出租要求</view>
+        </view>
+        <view class="multiple-select" style='padding-top:0'>
+          <view wx:for="{{requires}}" wx:key="{{item.id}}">
+            <text data-id="{{item.id}}" bindtap="onRequireSelectTag" class="{{item.select?'active':''}}">{{item.text}}</text>
+          </view>
+			  </view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label" space="emsp">详细介绍</text>
+					<textarea placeholder="" style='height: 300rpx'></textarea>
+				</view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-submit">
+		<button class="btn-block btn-red" bindtap="applySubmit">发布</button>
+	</view>
+</view>

@@ -1,0 +1,13 @@
+/* pages/sendlist/sendlist.wxss */
+.del-btn{
+  background-color: rgba(0, 0, 0, 0);
+  border-radius:5px;
+  border:1px solid #F24F50;
+  color:#F24F50;
+  text-align:center;
+  padding:10rpx
+}
+
+.rec-com{
+  margin-top: 40rpx
+}

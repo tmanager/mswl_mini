@@ -1,0 +1,34 @@
+<view>
+  <scroll-view scroll-Y="true" scroll-X="false"> 
+      <swiper class="swiper" indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}"  duration="{{duration}}" >
+          <block wx:for="{{goods.thumb}}" wx:key="index">
+              <swiper-item>
+                  <image mode="scaleToFill" src="{{item}}" />
+              </swiper-item>
+          </block>
+      </swiper>
+      <view class="title">{{goods.title}}</view>
+      <view class='price-row'>
+        <view class="price">￥{{goods.price}}</view>
+        <view><view class="cus-type">个人</view></view>
+      </view>
+      <view class="info">
+          <!--<block wx:for="{{goods.description}}" wx:key="index">-->
+              <text>{{goods.description}}</text>
+          <!-- </block>-->
+      </view>
+  </scroll-view>
+  <view class="footer">
+    <view class="footer_btn">
+      <view>
+          <view><image src="../../images/star.png"></image></view>
+          <view>收藏</view>
+      </view>
+      <view>
+          <view><image src="../../images/phone.png"></image></view>
+          <view>电话</view>
+      </view>
+    </view>
+  </view>
+</view>

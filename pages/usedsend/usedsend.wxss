@@ -1,0 +1,15 @@
+@import "../../css/send.wxss";
+.radio-group{
+  display: flex;
+  flex-direction: row;
+}
+.radio{
+  display: flex;
+  flex-direction: column;
+  flex: 1
+}
+
+.tui-menu-list{
+  font-size: 30rpx;
+  line-height: 60rpx;
+}

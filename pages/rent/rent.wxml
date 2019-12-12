@@ -1,0 +1,44 @@
+<!--pages/used/used.wxml-->
+<view class="container">
+	<view class="search flex-wrp">
+      <view class="search-left flex-item">
+          <image src="../../images/search.png"></image>
+          <input placeholder="请输入小区/商圈/地址" placeholder-class="search-placeholder"/>
+      </view>
+  </view>
+  <view class="nav-scroll">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+          <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+      </scroll-view>
+  </view>
+  <view class='tui-list-box rec-all'>
+    <view class='tui-gallery-list rec-one'>
+      <view>
+        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>合租 | 单间！奥体中路 贤文世家 精装单间急租</text>
+        <view class="pro-tips">3室次卧·20m<text class="sup">2</text>·贤文世家</view>
+        <view class='rec-tips'><text>临地铁</text><text>配套齐全</text><text>精装修</text></view>
+        <view class='rec-com'>
+          <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </view>
+    <view class='tui-gallery-list rec-one'>
+      <view>
+        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>合租 | 单间！奥体中路 贤文世家 精装单间急租</text>
+        <view class="pro-tips">3室次卧·20m<text class="sup">2</text>·贤文世家·齐鲁软件园</view>
+        <view class='rec-tips'><text>临地铁</text><text>配套齐全</text><text>精装修</text></view>
+        <view class='rec-com'>
+          <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

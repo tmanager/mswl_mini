@@ -1,0 +1,29 @@
+<!--pages/mine/mine.wxml-->
+<view class="container more">
+  <view class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="edit">绑定</text>
+    </view>
+  </view>
+</view>
+<view class="container more">
+  <view class="user flex-wrp flex-list">
+    <navigator url="../sendlist/sendlist">
+      <image src="../../images/send.png"></image>
+      <view>我的发布</view>
+    </navigator>
+    <navigator url="../collectlist/collectlist">
+      <image src="../../images/collect.png"></image>
+      <view>我的收藏</view>
+    </navigator>
+    <navigator url="../historylist/historylist">
+      <image src="../../images/history.png"></image>
+      <view>历史记录</view>
+    </navigator>
+  </view>
+  
+</view>

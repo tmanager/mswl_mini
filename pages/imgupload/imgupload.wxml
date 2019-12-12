@@ -1,0 +1,34 @@
+<view class='uploadPic'>
+  <view class='uploadPic-ul clearfix'>
+    <movable-area class='uploadPic-ul-wrap clearfix'>
+ 
+      <view wx:for="{{tempFilePaths}}" wx:key="path" class='uploadPic-li uploadPic-li-item' data-index='{{index}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm' data-img='{{item.path}}'>
+        <!-- item.src?item.src:item.path 这里的图片路径应该换为服务器返回的路径-->
+        <image class='uploadPic-li-pic' src='{{item.path}}'></image>
+ 
+        <!-- 图片最开始的的进度为0，上传图片服务器后改为上传后的进度，如果进度小于0则展示这个失败原因或者进度 -->
+        <view class='uploadPic-li-msg' wx:if="{{item.upload_percent<100 || item.iserror}}">{{(item.upload_percent
+          <100)?item.upload_percent:item.errormsg}}%</view>
+            <view class='uploadPic-li-fm' wx:if="{{(index==0)&&(uploadPicKind==1)}}">封面</view>
+            <view class='uploadPic-li-close' bindtap='delimg' data-keyindex="{{index}}"></view>
+        </view>
+ 
+        <!-- 把长按图片时候的图片路径 传过来 -->
+        <movable-view x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
+          <view class='item-move' hidden='{{hidden}}'>
+            <image class='uploadPic-li-pic' src="{{maskImg}}" mode="widthFix"></image>
+          </view>
+        </movable-view>
+ 
+        <!-- 添加图片按钮 -->
+        <view class='uploadPic-li' bindtap="uploadpic" wx:if="{{tempFilePaths.length<imgnum}}">
+          <view class='uploadPic-li-camer'>添加图片</view>
+        </view>
+    </movable-area>
+    </view>
+    <!-- 底部说明和按钮 -->
+    <view class='uploadPicB'>
+      <view class='uploadPicB-msg'>小技巧：长按图片拖动可修改封面图片</view>
+      <view class='uploadPicB-btn' bindtap='uploadPicFinshed'>完成</view>
+    </view>
+  </view>

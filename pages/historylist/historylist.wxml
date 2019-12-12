@@ -1,0 +1,149 @@
+<view class="top-tab flex-wrp flex-tab">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <view style='margin-bottom: 180rpx;'>
+      <view class='tui-list-box rec-all'>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='tabbar'>
+      <view>
+        <label class="checkbox">
+          <checkbox value="1"/>全选
+        </label>
+      </view>
+      <view>清除失效的</view>
+      <view>删除</view>
+    </view>
+  </view>
+  <view class="ctnt0" hidden="{{currentNavtab==1 ? '' : true}}">
+    <view style='margin-bottom: 80rpx'>
+      <view class='tui-list-box rec-all'>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+        <view class='tui-gallery-list rec-one'>
+          <checkbox class='checkbox' value="1"/>
+          <view>
+            <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+          </view>
+          <view>
+            <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+            <view class="collect-tips">
+              高新区 齐鲁软件园
+            </view>
+            <view class='rec-com'>
+              <view></view>
+              <view>2019/12/12 9:45</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='tabbar'>
+      <view>
+        <label class="checkbox">
+          <checkbox value="1"/>全选
+        </label>
+      </view>
+      <view>清除失效的</view>
+      <view>删除</view>
+    </view>
+  </view>
+</scroll-view>

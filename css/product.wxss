@@ -1,0 +1,162 @@
+
+.recommend{
+  height: 430rpx;
+  width: 93%;
+  margin: 20rpx;
+  border:1rpx solid #FFCCFF;
+  border-radius: 10rpx
+}
+
+.rec-title{
+  background: #FFCCFF;
+  color:#6B6B6B;
+  padding: 20rpx;
+}
+
+.rec-title text:nth-child(1){
+  color:#F24F50;
+  font-weight: bold;
+}
+
+.rec-title text:nth-child(2){
+  font-size: 25rpx;
+  padding-left: 20rpx
+}
+
+.rec-product{
+  display: flex;
+  flex-direction: row;
+  height: 340rpx;
+}
+
+.rec-product > view{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+  height: inherit;
+}
+
+.pro-img{
+  width: 90%;
+  height:180rpx;
+  margin: 20rpx;
+  border-radius: 5rpx;
+}
+
+.pro-title{
+  font-size: 28rpx;
+  /*line-height: 25rpx;
+  height: 50rpx;*/
+  font-weight: bold;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  padding: 0 20rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.pro-price{
+  color:#F24F50;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding:  0 20rpx;
+}
+
+.rec-one{
+  display: flex;
+  flex-direction: row;
+}
+
+.rec-one > view{
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+.rec-one > view:nth-child(1){
+  width: 30%
+}
+
+.rec-one > view:nth-child(2){
+  margin: 20rpx 20rpx 0 20rpx;
+  width: 70%
+}
+
+.rec-one-title{
+  height: 70rpx;
+  padding: 0 0rpx
+}
+
+.rec-tips{
+  font-size: 25rpx;
+  margin: 20rpx 0 15rpx;
+  color:#2795EC;
+}
+
+.rec-tips > text{
+  border: 1px solid #EAF4FD;
+  padding: 5rpx;
+  margin: 0 10rpx 0 0;
+  background-color: #EAF4FD;
+}
+
+.rec-com{
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.rec-com > view{
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+.rec-com > view:first-child{
+  width: 70%;
+  padding: 10rpx 0;
+}
+
+.rec-com > view:nth-child(2){
+  width: 30%
+}
+
+.look-btn{
+  background-color: #FF4E48;
+  background-image: linear-gradient(to right, #F9734D , #FF4E48);
+  border-radius: 15px;
+  border:0;
+  color: white;
+  box-shadow: 2px 5px 3px #FAD1CF;
+  text-align: center;
+  padding: 10rpx;
+}
+
+
+.price{
+  color: #F05424;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.sup{
+  vertical-align:super; 
+  font-size:9px; 
+  font-family:Arial, Helvetica, sans-serif;
+  margin:10px 0px 0px 0px
+}
+
+.pro-tips{
+  font-size: 25rpx;
+  margin: 10rpx 0 0 0;
+  color:#5F5F5F;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

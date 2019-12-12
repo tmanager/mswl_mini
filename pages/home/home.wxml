@@ -1,0 +1,42 @@
+<!--pages/used/used.wxml-->
+<view class="container">
+	<view class="search flex-wrp">
+      <view class="search-left flex-item">
+          <image src="../../images/search.png"></image>
+          <input placeholder="请输入搜索的类别" placeholder-class="search-placeholder"/>
+      </view>
+  </view>
+  <view class="nav-scroll">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+          <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+      </scroll-view>
+  </view>
+  <view class='tui-list-box rec-all'>
+    <view class='tui-gallery-list rec-one'>
+      <view>
+        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+        <view class='rec-tips'><text>保洁开荒</text><text>窗帘清洗</text></view>
+        <view class='rec-com'>
+          <view>好好家政服务公司</view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </view>
+    <view class='tui-gallery-list rec-one'>
+      <view>
+        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+        <view class='rec-tips'><text>保洁开荒</text><text>窗帘清洗</text></view>
+        <view class='rec-com'>
+          <view>好好家政服务公司</view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

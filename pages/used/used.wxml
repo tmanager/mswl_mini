@@ -1,0 +1,42 @@
+<!--pages/used/used.wxml-->
+<view class="container">
+	<view class="search flex-wrp">
+      <view class="search-left flex-item">
+          <image src="../../images/search.png"></image>
+          <input placeholder="请输入搜索的类别" placeholder-class="search-placeholder"/>
+      </view>
+  </view>
+  <view class="nav-scroll">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+          <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+      </scroll-view>
+  </view>
+  <view class='tui-list-box rec-all'>
+    <view class='tui-gallery-list rec-one'>
+      <view>
+        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>4570四核8G金士顿1600DR3 120固态+独显</text>
+        <view class="pro-tips">济阳城区</view>
+        <view class='rec-com'>
+          <view class='price'><view>1200<text style="font-size:25rpx">元</text></view></view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </view>
+    <view class='tui-gallery-list rec-one'>
+      <view>
+        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>沙发床，几乎没用过</text>
+        <view class="pro-tips">辛西路北口</view>
+        <view class='rec-com'>
+          <view class='price'><view>199<text style="font-size:25rpx">元</text></view></view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

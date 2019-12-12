@@ -1,0 +1,51 @@
+<!--pages/rentsend/rentsend.wxml-->
+<view class="container">
+  <view bindtap='imageUpload'>
+    <image src="{{coverimg}}" style='width:100%' mode="aspectFill"></image>
+  </view>
+  <view class="container-gray group">
+		<view class="group-header">基本信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label" space="emsp">类  别</text>
+					<view class="input-item-content">
+						<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="type" value="{{typeIndex}}" range="{{typeArr}}" mode="selector">{{typeArr[typeIndex]}}
+            </picker>
+					</view>
+				</view>
+        <view class="input-item">
+          <text class="input-item-label" space="emsp">标  题</text>
+          <view class="input-item-content">
+            <input type="text"></input>
+          </view>
+        </view>
+        <view class="input-item">
+					<text class="input-item-label" space="nbsp">联 系 人</text>
+					<view class="input-item-content">
+						<input type="text" placeholder=""></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="nbsp">联系电话</text>
+					<view class="input-item-content">
+						<input type="text" placeholder=""></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label" space="emsp">地  址</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="至少6个字"></input>
+					</view>
+				</view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label" space="emsp">详细介绍</text>
+					<textarea placeholder="" style='height: 300rpx'></textarea>
+				</view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-submit">
+		<button class="btn-block btn-red" bindtap="applySubmit">发布</button>
+	</view>
+</view>
