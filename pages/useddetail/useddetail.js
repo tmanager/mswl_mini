@@ -15,7 +15,8 @@ Page({
       title: "个人用台式机全套",
       price: 400,
       description:"八成新，正常使用"
-    }
+    },
+    menu: [{ 'title': '普通列表' }, { 'title': '图文列表' }, { 'title': '右侧有箭头列表' }, { 'title': '右侧无箭头列表' }]
   },
 
   /**

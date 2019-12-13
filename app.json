@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/useddetail/useddetail",
     "pages/chosen/chosen",
     "pages/total/total",
     "pages/index/index",
@@ -16,7 +15,9 @@
     "pages/homesend/homesend",
     "pages/sendlist/sendlist",
     "pages/historylist/historylist",
-    "pages/collectlist/collectlist"
+    "pages/collectlist/collectlist",
+    "pages/useddetail/useddetail",
+    "pages/rentdetail/rentdetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F24F50",

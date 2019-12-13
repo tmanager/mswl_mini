@@ -8,26 +8,69 @@
               </swiper-item>
           </block>
       </swiper>
-      <view class="title">{{goods.title}}</view>
-      <view class='price-row'>
-        <view class="price">￥{{goods.price}}</view>
-        <view><view class="cus-type">个人</view></view>
+      <view style='background-color:white'>
+        <view class="title">{{goods.title}}</view>
+        <view class='price-row'>
+          <view class="price">￥{{goods.price}}</view>
+          <view><view class="cus-type">个人</view></view>
+        </view>
       </view>
-      <view class="info">
-          <!--<block wx:for="{{goods.description}}" wx:key="index">-->
-              <text>{{goods.description}}</text>
-          <!-- </block>-->
+
+      <view class="tui-card">
+        <view class="tui-card-head">
+          商品简介
+        </view>
+        <view class='pro_detail'>
+            <view>类别</view>
+            <view>台式机</view>
+          </view>
+          <view class='pro_detail'>
+            <view>区域</view>
+            <view>历下区</view>
+          </view>
       </view>
+      <view class="tui-card">
+        <view class="tui-card-head">
+          服务详情
+        </view>
+        <view class="tui-card-content">
+          <text>{{goods.description}}</text>
+        </view>
+      </view>
+      <view class="tui-card">
+        <view class="tui-card-head">
+          发布者信息
+        </view>
+        <view class="tui-card-content">
+          <view><image src="../../images/person.png" style='width:80rpx; height:80rpx'></image> w**p</view>
+          <view class='per_detail'>
+            <view>
+              <view>34个月</view>
+              <view style='color:#c8c7cc'>成为会员</view>
+            </view>
+            <view>
+              <view>3个</view>
+              <view style='color:#c8c7cc'>发布帖子</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="tui-card">
+        <view class="tui-card-content">
+          <text>本平台不会收取任何费用！办理服务前请勿付定金、押金等费用！</text>
+          <image style='width:30rpx; height:30rpx' src="../../images/warn.png"></image>
+        </view>
+    </view>
   </scroll-view>
   <view class="footer">
     <view class="footer_btn">
       <view>
-          <view><image src="../../images/star.png"></image></view>
-          <view>收藏</view>
+        <view><image src="../../images/star.png"></image></view>
+        <view>收藏</view>
       </view>
       <view>
-          <view><image src="../../images/phone.png"></image></view>
-          <view>电话</view>
+        <view><image src="../../images/phone.png"></image></view>
+        <view>电话</view>
       </view>
     </view>
   </view>
