@@ -1,0 +1,139 @@
+1.精选
+送信内容
+{
+	timestamp:	"",			//日期时间
+	token:	"",				//token
+	userid:	"",				//用户id
+	request:{}				//请求信息
+}
+回信内容
+{
+	retcode: "",				//返回码
+	retmsg:	"",				//返回信息
+	response:	{			//回复信息
+		chosenlist:[
+			{
+        proid:xxxx,     //产品id
+				protype: x,		  //1:二手，2：租房，3家政服务
+				proname:xxxx,   //标题
+				protips:[xx,xx,xx],   //标签
+        proprice:xxxx,  //价格
+        publisher:xxxx, //发布者
+        address:xxxx,   //位置
+        housetype:xxx,  //户型，例如：三室，三室次卧等
+        housearea:xxxx, //房屋面积
+        village:xxxx,   //小区名称
+        business:xxxx   //商圈
+			}
+		]
+	
+	}			
+}
+
+2.产品详情
+送信内容
+{
+	timestamp:	"",			//日期时间
+	token:	"",				  //token
+	userid:	"",				  //用户id
+	request:{				    //请求信息
+    proid:xxxx        //产品id
+  }
+}
+回信内容
+{
+	retcode: "",			//返回码
+	retmsg:	"",				//返回信息
+	response:	{			  //回复信息
+    proid:xxxx,     //产品id
+    protype: x,		  //1:二手，2：租房，3家政服务
+    subtype:x,      //二级类型（二手：家具，家电，机械/设备，手机，台式机/配件，代步工具，摩托车，笔记本电脑，文体/户外/乐器；租房：整租，合租，短租/日租；家政：保姆月嫂，搬家，保洁清洗，家电维修，管道疏通，房屋维修，开锁/换锁，生活配送，电脑维修）
+    proname:xxxx,   //标题
+    protips:[xx,xx,xx],   //标签
+    proprice:xxxx,  //价格
+    prothumb:[xxx,xxx,xx],  //产品图片
+    prodetail:xxxx,  //产品详情
+    publisher:xxxx, //发布者
+    pubtype:xxxx,   //发布者类型 0：个人，1：企业（经济人）
+    pubphone:xxxx,  //发布者电话
+    jointime:xxxx,  //发布者成为会员时间
+    publetter:xxxx, //发布帖子个数
+    address:xxxx,   //位置
+    housetype:xxx,  //户型，例如：三室二厅一卫
+    bedtype:xxx,    //卧室类型，例如主卧，次卧，合租才有该字段
+    housearea:xxxx, //房屋面积
+    housefloor:xxxx,//楼层
+    orientation:xxx,//朝向
+    equipment:[xxx,xxx],  //房屋配置
+    village:xxxx,   //小区名称
+    business:xxxx   //商圈
+	}			
+}
+
+3.二手物品发布
+送信内容
+{
+	timestamp:	"",			//日期时间
+	token:	"",				  //token
+	userid:	"",				  //用户id
+	request:{				    //请求信息
+    subtype:xxxx,     //二级类型
+    proname:xxxx,     //标题
+    proprice:xxxx,    //价格
+    protips:[xx,xx,xx],   //标签
+    publisher:xxxx, //发布者
+    pubtype:xxxx,   //发布者类型 0：个人，1：企业（经济人）
+    pubphone:xxxx,  //发布者电话
+    address:xxxx,   //位置
+    prodetail:xxxx  //产品详情
+  }
+}
+回信内容
+{
+	retcode: "",			//返回码
+	retmsg:	"",				//返回信息
+	response:	{			  //回复信息
+  }
+}
+
+4.房屋出租发布
+送信内容
+{
+	timestamp:	"",			//日期时间
+	token:	"",				  //token
+	userid:	"",				  //用户id
+	request:{				    //请求信息
+    subtype:xxxx,     //二级类型
+    proname:xxxx,     //标题
+    proprice:xxxx,    //价格
+    protips:[xx,xx,xx],   //标签
+    publisher:xxxx, //发布者
+    pubtype:xxxx,   //发布者类型 0：个人，1：企业（经济人）
+    address:xxxx,   //位置
+    prodetail:xxxx  //产品详情
+    address:xxxx,   //位置
+    housetype:xxx,  //户型，例如：三室二厅一卫
+    bedtype:xxx,    //卧室类型，例如主卧，次卧，合租才有该字段
+    housearea:xxxx, //房屋面积
+    housefloor:xxxx,//楼层
+    orientation:xxx,//朝向
+    equipment:[xxx,xxx],  //房屋配置
+    village:xxxx,   //小区名称
+    business:xxxx,  //商圈
+    decoration:xxxx, //装修情况
+    require:[xxx,xxx],    //出租要求
+    deposit:xxx,          //押金
+    contacts:xxx,         //联系人姓名
+    contactsphone:xxxx,   //联系人电话
+    park:x,               //是否有车位
+    elevator:x,           //是否有电梯 
+    checkindate           //入住日期
+  }
+}
+回信内容
+{
+	retcode: "",			//返回码
+	retmsg:	"",				//返回信息
+	response:	{			  //回复信息
+  }
+}

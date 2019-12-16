@@ -25,13 +25,6 @@
           <view style='color:#666'>元</view>
 				</view>
         <view class="input-item">
-					<text class="input-item-label">购入价格</text>
-					<view class="input-item-content">
-						<input type="text" placeholder=""></input>
-					</view>
-          <view style='color:#666'>元</view>
-				</view>
-        <view class="input-item">
           <view class="input-item-label" style='width:10em'>勾选特征标签</view>
         </view>
         <view class="multiple-select" style='padding-top:0'>
