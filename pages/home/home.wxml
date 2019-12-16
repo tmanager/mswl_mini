@@ -14,7 +14,7 @@
   <view class='tui-list-box rec-all'>
     <view class='tui-gallery-list rec-one'>
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/home.jpg" class='pro-img'></image>
       </view>
       <view>
         <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
@@ -27,7 +27,7 @@
     </view>
     <view class='tui-gallery-list rec-one'>
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/bj.png" class='pro-img'></image>
       </view>
       <view>
         <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>

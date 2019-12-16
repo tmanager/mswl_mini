@@ -17,6 +17,7 @@
     "pages/historylist/historylist",
     "pages/collectlist/collectlist",
     "pages/useddetail/useddetail",
+    "pages/homedetail/homedetail",
     "pages/rentdetail/rentdetail"
   ],
   "window": {

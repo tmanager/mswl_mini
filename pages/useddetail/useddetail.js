@@ -11,9 +11,9 @@ Page({
     duration: 1000,  //滑动时间
     buyCount: 0,
     goods:{
-      thumb: ["../../images/1.jpg", "../../images/2.jpg"],
+      thumb: ["../../images/used.png"],
       title: "个人用台式机全套",
-      price: 400,
+      price: 1200,
       description:"八成新，正常使用"
     },
     menu: [{ 'title': '普通列表' }, { 'title': '图文列表' }, { 'title': '右侧有箭头列表' }, { 'title': '右侧无箭头列表' }]

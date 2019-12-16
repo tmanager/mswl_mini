@@ -14,7 +14,7 @@
   <view class='tui-list-box rec-all'>
     <view class='tui-gallery-list rec-one'>
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/used.png" class='pro-img'></image>
       </view>
       <view>
         <text class='pro-title rec-one-title'>4570四核8G金士顿1600DR3 120固态+独显</text>
@@ -27,7 +27,7 @@
     </view>
     <view class='tui-gallery-list rec-one'>
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/used.png" class='pro-img'></image>
       </view>
       <view>
         <text class='pro-title rec-one-title'>沙发床，几乎没用过</text>

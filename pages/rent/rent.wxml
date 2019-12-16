@@ -14,7 +14,7 @@
   <view class='tui-list-box rec-all'>
     <view class='tui-gallery-list rec-one'>
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/2.jpg" class='pro-img'></image>
       </view>
       <view>
         <text class='pro-title rec-one-title'>合租 | 单间！奥体中路 贤文世家 精装单间急租</text>
@@ -28,7 +28,7 @@
     </view>
     <view class='tui-gallery-list rec-one'>
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/1.jpg" class='pro-img'></image>
       </view>
       <view>
         <text class='pro-title rec-one-title'>合租 | 单间！奥体中路 贤文世家 精装单间急租</text>

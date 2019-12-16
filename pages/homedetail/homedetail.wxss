@@ -15,7 +15,8 @@ swiper-item image{
 .title{
     font-size: 32rpx;
     color: #333333;
-    padding: 20rpx 20rpx 0 20rpx;
+    padding: 20rpx 20rpx 20rpx 20rpx;
+    font-weight: bold;
 }
 
 .price-row{

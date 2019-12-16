@@ -10,32 +10,14 @@
       </swiper>
       <view style='background-color:white'>
         <view class="title">{{goods.title}}</view>
-        <view class='price-row'>
-          <view><view class="price">￥{{goods.price}}<text style="font-size:25rpx">元/月</text></view></view>
-          <view>押一付一</view>
-          <view><view class="cus-type">个人</view></view>
-        </view>
       </view>
-
       <view class="tui-card">
         <view class="tui-card-head">
-          房屋简介
+          区域介绍
         </view>
         <view class='pro_detail'>
-            <view>户型</view>
-            <view>三室两厅一卫</view>
-          </view>
-          <view class='pro_detail'>
-            <view>面积</view>
-            <view>25m<text class='sup'>2</text></view>
-          </view>
-          <view class='pro_detail'>
-            <view>楼层</view>
-            <view>10楼</view>
-          </view>
-          <view class='pro_detail'>
-            <view>朝向</view>
-            <view>南</view>
+            <view>服务区域</view>
+            <view>历下、历城、高新</view>
           </view>
           <view class='pro_detail'>
             <view>地址</view>
@@ -43,32 +25,19 @@
           </view>
       </view>
       <view class="tui-card">
+        <view class="tui-card-head">
+          服务报价
+        </view>
         <view class="tui-card-content">
-          <view class="multiple-select" style='padding:0'>
-            <view wx:for="{{goods.tips}}">
-              <text>{{item}}</text>
-            </view>
-          </view>
+          开荒保洁：4元/平方米
         </view>
       </view>
       <view class="tui-card">
         <view class="tui-card-head">
-          房屋介绍
+          服务信息
         </view>
         <view class="tui-card-content">
           <text>{{goods.description}}</text>
-        </view>
-      </view>
-      <view class="tui-card">
-        <view class="tui-card-head">
-          房屋配置
-        </view>
-        <view class="tui-card-content">
-          <view class="multiple-select" style='padding:0'>
-            <view wx:for="{{goods.equipment}}">
-              <text>{{item}}</text>
-            </view>
-          </view>
         </view>
       </view>
       <view class="tui-card">

@@ -37,32 +37,46 @@
     </view>
   </view>
   <view class='tui-list-box rec-all'>
-    <view class='tui-gallery-list rec-one'>
+    <navigator class='tui-gallery-list rec-one' url="../homedetail/homedetail">
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/bj.png" class='pro-img'></image>
       </view>
       <view>
-        <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
+        <text class='pro-title rec-one-title'>家庭保洁 开荒保洁</text>
         <view class='rec-tips'><text>保洁开荒</text><text>窗帘清洗</text></view>
         <view class='rec-com'>
           <view>好好家政服务公司</view>
           <view><view class='look-btn'>去看看</view></view>
         </view>
       </view>
-    </view>
-    <view class='tui-gallery-list rec-one'>
+    </navigator>
+    <navigator class='tui-gallery-list rec-one' url="../rentdetail/rentdetail">
       <view>
-        <image src="../../images/ceshi/in4.png" class='pro-img'></image>
+        <image src="../../images/2.jpg" class='pro-img'></image>
       </view>
       <view>
-        <text class='pro-title rec-one-title'>开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃开荒保洁家庭保洁擦玻璃</text>
-        <view class='rec-tips'><text>保洁开荒</text><text>窗帘清洗</text></view>
+        <text class='pro-title rec-one-title' style='-webkit-line-clamp:1;height: 35rpx;'>次卧合租 | 会展香格里拉 押一付一 精装修</text>
+        <view class="pro-tips">3室次卧·25m<text class="sup">2</text>会展香格里拉</view>
+        <view class='rec-tips'><text>临地铁</text><text>配套齐全</text><text>精装修</text></view>
         <view class='rec-com'>
-          <view>好好家政服务公司</view>
+          <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
           <view><view class='look-btn'>去看看</view></view>
         </view>
       </view>
-    </view>
+    </navigator>
+    <navigator class='tui-gallery-list rec-one' url="../useddetail/useddetail">
+      <view>
+        <image src="../../images/used.png" class='pro-img'></image>
+      </view>
+      <view>
+        <text class='pro-title rec-one-title'>个人用台式机全套</text>
+        <view class="pro-tips">济阳城区</view>
+        <view class='rec-com'>
+          <view class='price'><view>1200<text style="font-size:25rpx">元</text></view></view>
+          <view><view class='look-btn'>去看看</view></view>
+        </view>
+      </view>
+    </navigator>
   </view>
 </view>
 
