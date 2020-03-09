@@ -11,7 +11,7 @@ Page({
     duration: 1000,  //滑动时间
     buyCount: 0,
     goods: {
-      thumb: ["../../images/home.jpg"],
+      thumb: ["../../images/home.jpg", "../../images/bj.png"],
       title: "家庭保洁 开荒保洁",
       price: 400,
       description: "承接开荒保洁，家庭保洁，工程保洁。保洁项目包括：1.小区楼宇，厂房，停车场等建筑竣工后工程开荒保洁，别墅，写字楼，办公楼，教学楼，公寓，酒店，商场，商务会所，公司装潢后的全方位的开荒保洁。2.专项玻璃清洗。3.家庭日常保洁"

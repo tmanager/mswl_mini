@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/chosen/chosen",
     "pages/total/total",
+    "pages/chosen/chosen",
     "pages/index/index",
     "pages/mine/mine",
     "pages/logs/logs",
@@ -30,18 +30,18 @@
   "tabBar": {
     "color": "#abadbb",
     "selectedColor": "#F24F50",
-    "list": [
-      {
-        "pagePath": "pages/chosen/chosen",
-        "text": "精选",
-        "iconPath": "images/tab/sh.png",
-        "selectedIconPath": "images/tab/sh_selected.png"
-      },
+    "list": [      
       {
         "pagePath": "pages/total/total",
         "text": "全部",
         "iconPath": "images/tab/total.png",
         "selectedIconPath": "images/tab/total_selected.png"
+      },
+      {
+        "pagePath": "pages/chosen/chosen",
+        "text": "精选",
+        "iconPath": "images/tab/sh.png",
+        "selectedIconPath": "images/tab/sh_selected.png"
       },
       {
         "pagePath": "pages/send/send",
@@ -61,5 +61,6 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

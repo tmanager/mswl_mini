@@ -1,5 +1,5 @@
 // pages/total/total.js
-var bannerList = ['../../images/ceshi/ad.png', '../../images/ceshi/gg2.png', '../../images/ceshi/gg3.png', '../../images/ceshi/gg1.png'];;
+var bannerList = ['../../images/ad.png', '../../images/gg2.png', '../../images/gg3.png', '../../images/gg1.png'];;
 
 Page({
 

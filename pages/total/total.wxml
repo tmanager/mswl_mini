@@ -10,7 +10,7 @@
             <image class="tui-img" src="{{item}}"  mode="aspectFill" style="height:360rpx"/>
           </block>
           <block wx:else>
-            <image src="../../images/ceshi/ad.png" mode="aspectFill"></image>
+            <image src="../../images/ad.png" mode="aspectFill"></image>
           </block>
         </swiper-item>
       </block>
@@ -19,19 +19,19 @@
   <view class="section">
     <view class="tui-table-view">
       <navigator class="tui-col-3" url='../used/used'>
-        <image src="../../images/ceshi/laji.png" class='tui-image'></image>
+        <image src="../../images/laji.png" class='tui-image'></image>
         <view>二手物品</view>
       </navigator>
       <navigator class="tui-col-3" url='../rent/rent'>
-        <image src="../../images/ceshi/anzhuang.png" class='tui-image'></image>
+        <image src="../../images/anzhuang.png" class='tui-image'></image>
         <view>房屋出租</view>
       </navigator>
       <navigator class="tui-col-3" url='../home/home'>
-        <image src="../../images/ceshi/baomu.png" class='tui-image'></image>
+        <image src="../../images/baomu.png" class='tui-image'></image>
         <view>家政服务</view>
       </navigator>
       <navigator class="tui-col-3" url='../' bindtap='more'>
-        <image src="../../images/ceshi/house.png" class='tui-image'></image>
+        <image src="../../images/house.png" class='tui-image'></image>
         <view>更多</view>
       </navigator>
     </view>

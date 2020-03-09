@@ -11,9 +11,11 @@ page{
   box-sizing: border-box;
   background: #F0F4F3;
 }
+
 .flex-wrp{
   display: flex;
 }
+
 .flex-item{
   flex-grow: 1;
   text-align: center;
@@ -21,7 +23,7 @@ page{
 .user {
   width: 725rpx;
   background: #ffffff;
-  padding: 30rpx 25rpx 30rpx 0;
+  padding: 20rpx 25rpx 20rpx 0;
   margin: 15rpx 0 0 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #dcdcdc;
@@ -30,8 +32,8 @@ page{
 .user .userinfo-avatar{
   flex: 1;
   display: inline-block;
-  width: 100rpx;
-  height: 100rpx;
+  width: 120rpx;
+  height: 120rpx;
   border-radius: 80rpx;
 }
 .user .user-info{
@@ -44,6 +46,7 @@ page{
 .user .user-info .userinfo-nickname{
   padding: 8rpx 0 10rpx 0;
   font-size: 30rpx;
+  line-height: 100rpx;
   color: #818A8F;
 }
 .user .user-info .edit{
@@ -66,4 +69,96 @@ page{
 image{
   width: 80rpx;
   height: 80rpx
+}
+
+button{
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 120rpx;
+  padding: 0;
+  display:inline;
+  border:0!important;
+  font-weight: normal;
+  text-decoration:none;
+}
+
+button::after{
+  border: none;
+}
+/* ---弹窗css--- */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  color: #fff;
+}
+.modal-dialog {
+  width: 72%;
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  background: #fff;
+  border-radius: 12rpx;
+}
+.modal-content{
+  text-align: center;
+}
+.modal-content .show{
+  width: 450rpx;
+  height: 133rpx;
+  display: block;
+  margin: 0 auto;
+  z-index: 10000;
+}
+.iconWx{
+  width:52rpx;
+  height: 41rpx;
+  padding-right: 20rpx;
+}
+.iconPhone{
+  width:56rpx;
+  height: 56rpx;
+  padding-right: 15rpx;
+}
+.modal-content view:nth-of-type(2){
+  font-size: 38rpx;
+  color: #333333;
+  line-height: 1;
+}
+.modal-content view:nth-of-type(3){
+  font-size: 26rpx;
+  color: #9c9c9c;
+  margin: 18rpx 0 29rpx;
+  line-height: 1;
+}
+.modal-content button:nth-of-type(1){
+  width: 80%;
+  height: 80rpx;
+  border-radius: 60rpx;
+  margin: 0 auto 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #31cc32;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal-content button:nth-of-type(1)::after{
+  border: none;
+}
+.modal-content  .wxLogin{
+  font-size: 26rpx;
+  color: #424242;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 38rpx 0 80rpx;
 }
