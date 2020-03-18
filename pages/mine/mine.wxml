@@ -40,7 +40,7 @@
 <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
   <view class="modal-dialog" wx:if="{{showModal}}">
   <view class="modal-content">
-    <view class='show'><image src='../../images/gramtu.png' style='width:220rpx; height:80rpx; margin-top: 30rpx'></image></view>
+    <view class='show'><image src='../../images/mswl.png' style='width:156rpx; height:80rpx; margin-top: 30rpx'></image></view>
     <view>绑定手机号</view>
     <view>请先绑定手机号在进行此操作</view>  
     <button open-type='getPhoneNumber' bindgetphonenumber="bindgetPhoneNumber">

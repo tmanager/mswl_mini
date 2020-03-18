@@ -1,6 +1,7 @@
 // pages/mine/mine.js
 var app = getApp();
-
+var config = require('../../utils/config.js');
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -9,16 +10,7 @@ Page({
   data: {
     showModal: false,//定义登录弹窗,
     userInfoScope: 0,
-    userInfo: app.globalData.userInfo,
-    mark: 5,
-    mode: [
-      { icon: "", title: "修改降重", url: "" },
-      { icon: "", title: "母语润色", url: "" },
-      { icon: "", title: "人工翻译", url: "" },
-      { icon: "", title: "Essay写作", url: "" },
-      { icon: "", title: "在线客服", url: "" },
-      { icon: "", title: "投诉建议", url: "" }
-    ]
+    userInfo: app.globalData.userInfo
   },
 
   /**
@@ -32,7 +24,7 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           that.setData({
-            //userInfoScope: 1
+            userInfoScope: 1
           });
         }
       }
@@ -168,7 +160,7 @@ Page({
         userInfo: userInfo,
         mark: 0
       });
-      /*wx.request({
+      wx.request({
         url: config.serverAddress + 'login/userinfo',
         data: util.sendMessageEdit(null, data),
         header: {
@@ -191,7 +183,7 @@ Page({
             self.registFail();
           }
         }
-      })*/
+      })
     } else {
       wx.showModal({
         title: '提示',
