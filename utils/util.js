@@ -332,6 +332,49 @@ const formatCurrency = num => {
   return num + point;
 }
 
+function uploadFils(url, filePathArr, formData = {}) {
+  return uploadFilsSync(url, filePathArr, formData, 0, { success: [], fail: [] });
+}
+
+function uploadFilsSync(url, filePathArr, formData, index, result) {
+  return upload(url, filePathArr[index++], formData)
+    .then(res => {
+      result.success.push({ index: index, res: res });
+      if (index === filePathArr.length) {
+        return result;
+      } else {
+        return uploadFilsSync(url, filePathArr, formData, index, result);
+      }
+    })
+    .catch(err => {
+      result.fail.push({ index: index, res: err });
+      if (index === filePathArr.length) {
+        return result;
+      } else {
+        return uploadFilsSync(url, filePathArr, formData, index, result);
+      }
+    });
+}
+
+function upload(url, filePath, formData = {}) {
+  let header = { "Content-Type": "multipart/form-data" };
+  return new Promise((resolve, reject) => {
+    wx.uploadFile({
+      url: url,
+      header: header,
+      filePath: filePath,
+      name: "file",
+      formData: formData,
+      success(res) {
+        resolve(res.data);
+      },
+      fail: function (error) {
+        reject(error);
+      }
+    });
+  });
+}
+
 module.exports = {
   formatTime: formatTime,
   getLocation: getLocation,
@@ -346,5 +389,7 @@ module.exports = {
   formatDateTime: formatDateTime,
   formatDate: formatDate,
   phoneCheck: phoneCheck,
-  formatCurrency: formatCurrency
+  formatCurrency: formatCurrency,
+  uploadFils: uploadFils,
+  upload: upload
 }

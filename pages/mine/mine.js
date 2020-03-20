@@ -153,7 +153,8 @@ Page({
         country: userInfo.country,
         province: userInfo.province,
         city: userInfo.city,
-        language: userInfo.language
+        language: userInfo.language,
+        channel: config.CHANNEL
       }
       wx.setStorageSync("register", "1");
       self.setData({

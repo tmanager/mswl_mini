@@ -5,10 +5,10 @@
     </block>
   </view>
   <view class="nav_right">
-    <view wx:if="{{navRightItems[curIndex]}}">
-      <block wx:for="{{navRightItems[curIndex]}}">
+    <view wx:if="{{subTypeList[curIndex]}}">
+      <block wx:for="{{subTypeList[curIndex]}}">
         <view class="nav_right_items">
-          <navigator url="{{navLeftItems[curNav].url}}?brand={{item.id}}">
+          <navigator url="{{navLeftItems[curNav].url}}?type={{curNav}}&subtype={{item.id}}">
             <view>
               <block wx:if="{{item.logo}}">
                 <image src="{{item.logo}}"></image>
@@ -17,12 +17,7 @@
                 <image src="http://temp.im/50x30"></image>
               </block>
             </view>
-            <view wx:if="{{item.desc}}">
-              <text>{{item.desc}}</text>
-            </view>
-            <view wx:else>
-              <text>{{item.desc2}}</text>
-            </view>
+            <text>{{item.typename}}</text>
           </navigator>
         </view>
       </block>

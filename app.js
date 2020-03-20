@@ -30,7 +30,6 @@ App({
                 var json = res.data.response;
                 wx.setStorageSync('openid', json.openid);
                 wx.setStorageSync('register', json.register);
-                wx.setStorageSync('mark', json.mark);
                 wx.setStorageSync('sessionKey', json.session_key);
                 if (json.register == 1) {
                   that.bindGetUserInfo();
@@ -71,7 +70,8 @@ App({
           country: res.userInfo.country,
           gender: res.userInfo.gender,
           language: res.userInfo.language,
-          province: res.userInfo.province
+          province: res.userInfo.province,
+          channel: config.CHANNEL
         }
         wx.request({
           url: config.serverAddress + 'login/userinfo',

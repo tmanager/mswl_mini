@@ -6,8 +6,8 @@
               indicator-color="#777" indicator-active-color="yellow">
       <block wx:for-items="{{banner_url}}">
         <swiper-item>
-          <block wx:if="{{item}}">
-            <image class="tui-img" src="{{item}}"  mode="aspectFill" style="height:360rpx"/>
+          <block wx:if="{{item.ad_img}}">
+            <image class="tui-img" src="{{item.ad_img}}"  mode="aspectFill" style="height:360rpx"/>
           </block>
           <block wx:else>
             <image src="../../images/ad.png" mode="aspectFill"></image>
@@ -36,47 +36,53 @@
       </navigator>
     </view>
   </view>
-  <view class='tui-list-box rec-all'>
-    <navigator class='tui-gallery-list rec-one' url="../homedetail/homedetail">
-      <view>
-        <image src="../../images/bj.png" class='pro-img'></image>
-      </view>
-      <view>
-        <text class='pro-title rec-one-title'>家庭保洁 开荒保洁</text>
-        <view class='rec-tips'><text>保洁开荒</text><text>窗帘清洗</text></view>
-        <view class='rec-com'>
-          <view>好好家政服务公司</view>
-          <view><view class='look-btn'>去看看</view></view>
+  <view class='tui-list-box rec-all' wx:for="{{infoList}}">
+    <view wx:if="{{item.busitype == '0'}}">
+      <navigator class='tui-gallery-list rec-one' url="../homedetail/homedetail?infoid={{item.infoid}}">
+        <view>
+          <image src="{{item.thumbnail}}" class='pro-img'></image>
         </view>
-      </view>
-    </navigator>
-    <navigator class='tui-gallery-list rec-one' url="../rentdetail/rentdetail">
-      <view>
-        <image src="../../images/2.jpg" class='pro-img'></image>
-      </view>
-      <view>
-        <text class='pro-title rec-one-title' style='-webkit-line-clamp:1;height: 35rpx;'>次卧合租 | 会展香格里拉 押一付一 精装修</text>
-        <view class="pro-tips">3室次卧·25m<text class="sup">2</text>会展香格里拉</view>
-        <view class='rec-tips'><text>临地铁</text><text>配套齐全</text><text>精装修</text></view>
-        <view class='rec-com'>
-          <view class='price'><view>900<text style="font-size:25rpx">元/月</text></view></view>
-          <view><view class='look-btn'>去看看</view></view>
+        <view>
+          <text class='pro-title rec-one-title'>{{item.title}}</text>
+          <view class="pro-tips">{{item.address}}</view>
+          <view class='rec-com'>
+            <view></view>
+            <view><view class='look-btn'>去看看</view></view>
+          </view>
         </view>
-      </view>
-    </navigator>
-    <navigator class='tui-gallery-list rec-one' url="../useddetail/useddetail">
-      <view>
-        <image src="../../images/used.png" class='pro-img'></image>
-      </view>
-      <view>
-        <text class='pro-title rec-one-title'>个人用台式机全套</text>
-        <view class="pro-tips">济阳城区</view>
-        <view class='rec-com'>
-          <view class='price'><view>1200<text style="font-size:25rpx">元</text></view></view>
-          <view><view class='look-btn'>去看看</view></view>
+      </navigator>
+    </view>
+    <view wx:if="{{item.busitype == '1'}}">
+      <navigator class='tui-gallery-list rec-one' url="../rentdetail/rentdetail?infoid={{item.infoid}}">
+        <view>
+          <image src="{{item.thumbnail}}" class='pro-img'></image>
         </view>
-      </view>
-    </navigator>
+        <view>
+          <text class='pro-title rec-one-title' style='-webkit-line-clamp:1;height: 35rpx;'>{{item.title}}</text>
+          <view class="pro-tips">{{item.housetype}}·{{item.area}}m<text class="sup">2</text>{{item.community}}</view>
+          <view class='rec-tips'><text>临地铁</text><text>配套齐全</text><text>精装修</text></view>
+          <view class='rec-com'>
+            <view class='price'><view>{{item.price}}<text style="font-size:25rpx">元/月</text></view></view>
+            <view><view class='look-btn'>去看看</view></view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view wx:if="{{item.busitype == '2'}}">
+      <navigator class='tui-gallery-list rec-one' url="../useddetail/useddetail?infoid={{item.infoid}}">
+        <view>
+          <image src="{{item.thumbnail}}" class='pro-img'></image>
+        </view>
+        <view>
+          <text class='pro-title rec-one-title'>{{item.title}}</text>
+          <view class="pro-tips">{{item.address}}</view>
+          <view class='rec-com'>
+            <view class='price'><view>{{item.price}}<text style="font-size:25rpx">元</text></view></view>
+            <view><view class='look-btn'>去看看</view></view>
+          </view>
+        </view>
+      </navigator>
+    </view>
   </view>
 </view>
 

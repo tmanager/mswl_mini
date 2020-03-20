@@ -2,6 +2,10 @@
 
 var that;
 
+let pages;
+let prevPage; 
+
+
 Page({
 
   /**
@@ -38,8 +42,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    pages = getCurrentPages();
+    prevPage = pages[pages.length - 2]; 
     this.setData({
-      tempFilePaths: wx.getStorageSync("sendimg") || []
+      tempFilePaths: prevPage.data.infoImage || []
     })
   },
 
@@ -208,7 +214,9 @@ Page({
 
     // 点击完成后的动作
     var tempFilePaths = that.data.tempFilePaths;
-    wx.setStorageSync("sendimg", tempFilePaths)
+    prevPage.setData({
+      infoImage: tempFilePaths
+    });
     wx.navigateBack({
       delta: 1
     })

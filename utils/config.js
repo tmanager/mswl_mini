@@ -1,6 +1,7 @@
 var config = {
-  serverAddress: 'https://www.gramtu.com/gramtu/mini/',
-  SUCCESS: "0000"
+  serverAddress: 'http://172.16.7.107:8003/mswl/mini/',
+  SUCCESS: "0000",
+  CHANNEL: 0
 }
 
 module.exports = config;
